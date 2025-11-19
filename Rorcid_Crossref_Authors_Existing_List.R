@@ -120,10 +120,7 @@ rorcid::orcid_auth()
 
 # set some variablees ---------------------------------------------------------------------------
 
-# set the working directory where this script is
-# a folder called "data" is also expected to be in this directory
-# example: setwd("C:/Users/rabun/OneDrive - LYRASIS/Documents/RsearchResults")
-setwd("PASTE WORKING DIRECTORY HERE")
+# Assumes working directory is the project root (with ORCID-Data-Visualization.Rproj and data/). No setwd() needed.
 
 # set the time period of interest: this script will compile collaboration data since Jan 1 of this year.
 # replace the YYYY with a 4 digit year.

@@ -26,11 +26,11 @@ library(stringr)
 library(tidyr)
 
 # Custom variables for file paths, organization, and dates
-setwd("ENTER YOUR WORKING DIRECTORY HERE")  
 file_path <- "ENTER YOUR FILE PATH HERE"    
 organization_name <- "ENTER YOUR ORGANIZATION NAME HERE"  
 start_date <- "ENTER START DATE HERE"        
 update_date <- "ENTER UPDATE DATE HERE"       
+# Assumes working directory is the project root (with ORCID-Data-Visualization.Rproj and data/). No setwd() needed. 
 
 
 # Generate subtitle panel for displaying dates

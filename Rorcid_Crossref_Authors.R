@@ -121,10 +121,8 @@ rorcid::orcid_auth()
 
 # set some variables   ----------------------------------------------------------------------------
 
-# set the working directory where this script is
-# a folder called "data" is also expected to be in this directory
-setwd("PASTE YOUR WORKING DIRECTORY HERE")
 
+# Assumes working directory is the project root (with ORCID-Data-Visualization.Rproj and data/). No setwd() needed.
 # set the time period of interest: this script will compile collaboration data since Jan 1 of this year.
 # replace the YYYY with a 4 digit year.
 # the more years of data desired, the longer some portions of this script will take to run

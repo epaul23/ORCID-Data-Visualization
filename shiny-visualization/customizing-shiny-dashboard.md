@@ -11,7 +11,6 @@ Take the steps below to build your own Shiny dashboard. For questions about Shin
     * Start date: The earliest date a publication can be and still be included. This should correspond to the first day of the year you selected in the `Rorcid_Crossref_Authors.R` script. For example, if you are analyzing data from 2024 to date, the start date should be `Jan 1, 2024`
     * Update date: The most recent date when the CSV File was last updated.  
     * For example: 
-        * setwd("/Users/yourname/Desktop/ORCID-Data-Visualization/data")  
         * file_path <- "./orcid_data_latlng.csv"
         * organization_name <- "University of New Brunswick"  
         * start_date <- "Jan 1, 2024"        
