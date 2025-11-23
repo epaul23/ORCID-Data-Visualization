@@ -1,7 +1,38 @@
-# Script by Olivia Given Castello, adapted by Sheila Rabun, with contributions from Isabela Souza Cefrin
-# based on: https://ciakovx.github.io/rorcid.html and 04-rcrossref_metadata.R at https://github.com/ciakovx/fsci2022/tree/main/code
-# Retrieves ORCID profile and Crossref metadata for authors from an existing list of ORCID iDs, 
-# since a given year, paired with that of the co-authors with whom they collaborated.
+# -------------------------------------------------------------------------
+# File: Rorcid_Crossref_Authors_Existing_List.R
+# Project: ORCID-Data-Visualization 
+# Repository : https://github.com/crkn-rcdr/ORCID-Data-Visualization
+# Original author: Olivia Given Castello
+# Contributions : Isabela Souza
+# Based on : 
+#         -https://ciakovx.github.io/rorcid.html
+#         -04-rcrossref_metadata.R at https://github.com/ciakovx/fsci2022/tree/main/code
+#
+#
+# Purpose:
+#   Start from an existing list of ORCID iDs and build the same
+#   co-author dataset as Rorcid_Crossref_Authors.R, using Crossref/
+#   DataCite metadata for mapping and visualization.
+#
+# Inputs / prerequisites:
+#   - ORCID public API token saved in .Renviron (ORCID_TOKEN)
+#   - Crossref email saved in .Renviron (e.g. crossref_email = "you@example.com")
+#   - GeoNames username set via options(geonamesUsername = "your_username")
+#   - Existing ORCID list in data/my_orcids_data.csv
+#   - Year and Home institution IDs & settings configured in the “set some variables” section
+#   - Existing data/ folder in the project root
+#
+# Outputs:
+#   - data/orcid_data_latlng.csv   # final file after running Geonames_Get_Lat_Long.R
+#   - (optionally) data/orcid-data.csv if you uncomment the write_csv() line
+#
+# How to run:
+#   - Open the ORCID-Data-Visualization project (Rproj or VS Code workspace)
+#   - Make sure my_orcids_data.csv in the data/ folder
+#   - Install/load required packages in this script
+#   - Run the entire file
+# -------------------------------------------------------------------------
+
 
 # Install and load packages -----------------------------------------------
 

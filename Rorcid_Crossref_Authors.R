@@ -1,7 +1,34 @@
-# Script by Olivia Given Castello, with contributions from Isabela Souza Cefrin based on: 
-# https://ciakovx.github.io/rorcid.html and 04-rcrossref_metadata.R at https://github.com/ciakovx/fsci2022/tree/main/code
-# Retrieves ORCID profile and Crossref metadata for authors from a given institution, 
-# since a given year, paired with that of the co-authors with whom they collaborated.
+# -------------------------------------------------------------------------
+# File: Rorcid_Crossref_Authors.R
+# Project: ORCID-Data-Visualization 
+# Repository : https://github.com/crkn-rcdr/ORCID-Data-Visualization
+# Original author: Olivia Given Castello
+# Contributions : Isabela Souza
+# Based on : 
+#         -https://ciakovx.github.io/rorcid.html
+#         -04-rcrossref_metadata.R at https://github.com/ciakovx/fsci2022/tree/main/code
+#
+#
+# Purpose:
+#   Retrieve ORCID records for a home institution, pull Crossref/DataCite
+#   metadata for their DOIs, and build a co-author dataset for mapping and visualization
+#
+# Inputs / prerequisites:
+#   - ORCID public API token saved in .Renviron (ORCID_TOKEN)
+#   - Crossref email saved in .Renviron (e.g. crossref_email = "you@example.com")
+#   - GeoNames username set via options(geonamesUsername = "your_username")
+#   - Year and Home institution IDs & settings configured in the “set some variables” section
+#   - Existing data/ folder in the project root
+#
+# Outputs:
+#   - data/orcid-data.csv        # co-author + affiliation data
+#   - (optionally) data/orcid_data_latlng.csv after running Geonames_Get_Lat_Long.R
+#
+# How to run:
+#   - Open the ORCID-Data-Visualization project (Rproj or VS Code workspace)
+#   - Install/load required packages in this script
+#   - Run the entire file
+# -------------------------------------------------------------------------
 
 # Install and load packages -----------------------------------------------
 
