@@ -726,8 +726,8 @@ names_df <- rbind(master_names,credit_names)
 # unnest the author list for each CrossRef DOI 
 cr_what_auths <- cr_merge %>% unnest(author)
 
-# unnest the author list for each DataCite DOI
-dc_what_auths <- dc_merge %>% unnest(author)
+# unnest the author and title list for each DataCite DOI
+dc_what_auths <- dc_merge %>% unnest(author) %>% unnest(title)
 
 # rename columns to match CrossRef columns
 dc_what_auths <- dc_what_auths %>%
