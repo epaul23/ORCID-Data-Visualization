@@ -8,6 +8,8 @@
 #         -https://ciakovx.github.io/rorcid.html
 #         -04-rcrossref_metadata.R at https://github.com/ciakovx/fsci2022/tree/main/code
 #
+# LICENSE:This project is a derivative of Collaboration Data Visualization © 2022 by Lyrasis, used under CC BY-SA 4.0.
+#       -https://creativecommons.org/licenses/by-sa/4.0/
 #
 # Purpose:
 #   Retrieve ORCID records for a home institution, pull Crossref/DataCite
