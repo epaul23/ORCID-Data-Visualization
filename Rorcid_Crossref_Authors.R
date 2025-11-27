@@ -1076,6 +1076,12 @@ co_authors_full_info <- co_authors_full_info %>% select(doi:country2)
 # the sourced script (Geonames_Get_Lat_Long.R) will generate a final CSV file: "./data/orcid_data_latlng.csv"
 source("./Geonames_Get_Lat_Long.R")
 
+
+file.rename(
+  "data/orcid_data_latlng.csv",
+  paste0("data/orcid_data_latlng_",my_year,".csv")
+)
+
 # Ta da, you should now have a data file to visualize with Shiny!
 
 # Before visualizing your data, consider cleaning your data file, either manually or using a tool
